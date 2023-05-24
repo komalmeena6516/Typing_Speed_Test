@@ -6,7 +6,7 @@ import {toast} from 'react-toastify';
 import ErrorMapping from '../Utils/ErrorMapping'
 
 
-const Login = () => {
+const Login = ({handleClose}) => {
 
 
     const [email, setEmail] = useState('');
@@ -40,6 +40,7 @@ const Login = () => {
                 progress: undefined,
                 theme: "dark",
                 });
+                handleClose();
         }).catch((err)=>{
             toast.error(ErrorMapping[err.code] || 'some error ocurr', {
                 position: "top-right",
