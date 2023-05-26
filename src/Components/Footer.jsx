@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Select from 'react-select';
 import { themeOptions } from '../Utils/themeOptions';
 import { useTheme } from '../Context/ThemeContext';
-
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import FacebookIcon from '@mui/icons-material/Facebook';
 const Footer = () => {
 
     // const [value, setValue] = useState({});
@@ -17,7 +19,9 @@ localStorage.setItem("theme", JSON.stringify(e.value));
     return (
         <div className='footer'>
             <div className="links">
-                Links
+                <a href='https://github.com/komalmeena6516' target='_blank'> <GitHubIcon /> </a>
+                <a href='https://www.linkedin.com/in/komalmeena6516/' target='_blank'>  <LinkedInIcon /> </a>
+                <a href='https://www.facebook.com/profile.php?id=100035481483240' target='_blank'>  <FacebookIcon /> </a>
             </div>
             <div className="themeButton">
 
@@ -27,8 +31,14 @@ localStorage.setItem("theme", JSON.stringify(e.value));
                     menuPlacement='top'
                     defaultValue={{label: theme.label, value: theme}}
                     styles = {{
-                        control: styles => ({...styles, backgroundColor: theme.background}),
+                        control: (styles, state) => ({...styles,
+                             borderColor: state.isFocused ? theme.color : theme.typeBoxtext,
+                            backgroundColor: theme.background,
+                            color: "white"
+                            }),
+
                         menu: styles =>({...styles, backgroundColor: theme.background }),
+
                         option : ( styles, {isFocused}) =>{
                             return {
                                 ...styles,

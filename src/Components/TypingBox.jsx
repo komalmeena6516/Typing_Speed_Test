@@ -199,14 +199,15 @@ const TypingBox = () => {
 
     //calculate the WPA
     const calculateWPM = () => {
-       return Math.round((correctChars / 5) / (testTime));
-    }
+      
+       return Math.round((correctChars/5)/(testTime/60));
+    };
+    
 
     const calculateAcc = () => {
-       return Math.round((correctWords / currWordIndex) * 100);
+       return Math.round((correctWords/currWordIndex)*100);
     }
-    // console.log(inputRef);
-    // console.log(calculateAcc() + " acc and wpm " + calculateWPM());
+
     //on page load the focus on inputbox
     const focusInput = () => {
         inputRef.current.focus();
@@ -236,7 +237,9 @@ const TypingBox = () => {
                 missedChars={missedChars}
                 extraChars={extraChars}
                 graphData={graphData}
-            />) : (<div className='type-box' onClick={focusInput}>
+            />) 
+            :
+             (<div className='type-box' onClick={focusInput}>
                 <div className="words">
                     {
                         wordsArray.map((word, index) => (

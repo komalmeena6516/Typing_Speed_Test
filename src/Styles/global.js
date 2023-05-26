@@ -24,8 +24,6 @@ body{
     width:100vw;
     align-items:center;
     text-align:center;
-    border:2px solid white;
-
 }
 
 .type-box{
@@ -43,6 +41,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     color: ${({theme})=> theme.typeBoxtext};
+    font-family: math;
 }
 .word{
     margin:5px;
@@ -85,7 +84,7 @@ body{
     color: ${({theme})=> theme.textColor};
 }
 .incorrect{
-    color: red;
+    color: ${({theme})=> theme.errorColor};
 }
 
 .upper-menu{
@@ -149,8 +148,79 @@ body{
     margin-left:auto;
     margin-right:auto;
 }
-// . css-1dimb5e-singleValue{
-//     color: ${({theme})=> theme.textColor}
 
-// }
+.logo{
+    display: flex;
+}
+.logo-name{
+    font-size: 23px;
+    font-style: inherit;
+    font-family: monospace;
+    font-weight: 600;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.user-profile{
+    width:1000px;
+    margin :auto;
+    display: flex;
+    height: 15rem;
+    background: ${({theme})=>theme.typeBoxtext};
+    border-radius: 20px;
+    padding: 1rem;
+    justify-content: center;
+    align-text: center;
+}
+
+.footer .links{
+    display: flex;
+    gap:1.5rem;
+}
+.footer .links a{
+    color: ${({theme})=>theme.textColor}
+}
+
+.user{
+    width:50%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-right: 2px solid;
+}
+
+.info{
+    width: 60%;
+    padding: 1rem;
+    margin-top: 0.6rem;
+}
+
+.picture{
+    width: 40%;
+}
+
+.total-tests{
+    width: 50%;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table{
+    margin: auto;
+    width: 1000px;
+}
+.graph-user-page{
+    margin: auto;
+    width: 1000px;
+}
+.center-of-screen{
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
 `;

@@ -24,7 +24,6 @@ const AccountCircle = () => {
     const handleModalOpen = () => {
         if (user) {
             //navigate to user page
-
             navigate('/user');
         }
         else {
@@ -98,8 +97,10 @@ const AccountCircle = () => {
 
     return (
         <div>
-            <AccountCircleIcon onClick={handleModalOpen} />
-            {user && <LogoutIcon onClick={logout} />}
+            <AccountCircleIcon onClick={handleModalOpen} 
+            style={{fontSize: "1.8rem", marginRight: "5px"}}/>
+            {user && <LogoutIcon onClick={logout}
+            style={{fontSize: "1.8rem"}} />}
 
             <Modal
                 open={open}

@@ -96,7 +96,7 @@ const Stats = (
                 <div className="subtitle">{wpm}</div>
                 <div className="title">Accuracy</div>
                 <div className="subtitle">{accuracy}</div>
-                <div className="title">result</div>
+                <div className="title">Characters</div>
                 <div className="subtitle">{correctChars}/{incorrectChars}/{missedChars}/{extraChars}</div>
             </div>
             <div className="right-stats">
