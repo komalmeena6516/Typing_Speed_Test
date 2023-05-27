@@ -71,6 +71,13 @@ typeBoxtext: "#6f6c91",
 errorColor: "#ffe23e"
  }
 
+ const menthol = {
+  label: "Menthol",
+  background: "#00c18c",
+  textColor: "#186544",
+  typeBoxtext: "#99fdd8",
+  errorColor: "#e03c3c"
+ }
 
  export const themeOptions = [
     {label: 'Dark', value: darkTheme},
@@ -80,8 +87,7 @@ errorColor: "#ffe23e"
     {label:"Blue Dolphone", value: Blue_Dolphine},
     {label:"Grey", value: Grey},
     {label:"Future Funk", value: Future_Funk},
+    {label: 'Menthol', value: menthol},
    {label: 'Copper', value: copper},
-    {label: 'Fledging', value: fledging},
-
-
+    {label: 'Fledging', value: fledging}
  ];

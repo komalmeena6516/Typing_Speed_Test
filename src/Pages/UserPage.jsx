@@ -12,7 +12,7 @@ const UserPage = () => {
 
     const [data, setData] = useState([]);
     const [graphData, setGraphData] = useState([]);
-const [dataLoading, setDataLoading] = useState(true);
+    const [dataLoading, setDataLoading] = useState(true);
     const [user, loading] = useAuthState(auth);
     const navigate = useNavigate();
     const fetchUserData = () => {
@@ -45,7 +45,7 @@ const [dataLoading, setDataLoading] = useState(true);
 
     if (loading || dataLoading) {
         return <div className='center-of-screen'>
-            <CircularProgress size={300}/>
+            <CircularProgress size={300} />
         </div>;
     }
     return (
